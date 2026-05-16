@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhishGuard - Escudo Inteligente contra Phishing por Correo</title>
+  <meta name="description" content="PhishGuard: plataforma de detección no supervisada de phishing en correos electrónicos mediante clustering de embeddings y análisis semántico con LLM autoalojado.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header id="header">
+    <!-- Logo / Brand -->
+    <a class="nav-brand" href="#">
+      <div id="header-img" class="brand-logo">
+        <i class="fa-solid fa-shield-halved brand-icon"></i>
+        <span class="brand-text">PhishGuard</span>
+      </div>
+    </a>
+
+    <!-- Toggle Menu para Mobile -->
+    <input type="checkbox" id="toggle-menu" role="button">
+    <label for="toggle-menu" class="toggle-menu">Menú</label>
+
+    <!-- Menús -->
+    <nav id="nav-bar" class="navbar">
+      <ul class="menu">
+        <li><a class="nav-link" href="#featured">Cómo funciona</a></li>
+        <li><a class="nav-link" href="#collections">Características</a></li>
+        <!-- <li><a class="nav-link" href="#about">Sobre nosotros</a></li> -->
+        <!-- <li><a class="nav-link" href="#contact">Contacto</a></li> -->
+      </ul>
+      <ul class="social-menu">
+        <li><a href="#" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a></li>
+        <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a></li>
+        <li><a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-img">
+      <div class="hero-illustration">
+        <i class="fa-solid fa-shield-halved hero-shield"></i>
+        <i class="fa-solid fa-envelope hero-sms"></i>
+        <i class="fa-solid fa-lock hero-lock"></i>
+        <i class="fa-solid fa-circle-exclamation hero-alert"></i>
+      </div>
+    </div>
+    <div class="hero-text">
+      <span class="hero-tag">ML No Supervisado · LLM Autoalojado</span>
+      <h1>Tu Escudo Inteligente<br>Contra el Phishing</h1>
+      <p class="hero-subtitle">Detección de fraudes en correos electrónicos mediante clustering de embeddings y análisis semántico con un LLM ejecutado en infraestructura propia. Sin APIs externas. Sin compromisos de privacidad.</p>
+      <a href="#featured" class="btn">Descubre más</a>
+    </div>
+  </div>
+
+  <!-- Featured Section -->
+  <section id="featured">
+    <div class="title title-left">
+      <span class="line"></span><h3>Pipeline de IA</h3>
+    </div>
+    <div class="wrapper">
+      <div class="image">
+        <div class="email-mockup">
+          <div class="email-header">
+            <div class="email-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <p class="email-title">Bandeja de entrada</p>
+          </div>
+          <div class="email-body">
+            <div class="email-preview email-suspicious">
+              <div class="email-meta">
+                <span class="email-from">soporte@banc0-secur1ty.com</span>
+                <span class="email-badge badge-danger">
+                  <i class="fa-solid fa-triangle-exclamation"></i> Phishing
+                </span>
+              </div>
+              <p class="email-subject">Su cuenta será suspendida en 24 horas</p>
+              <div class="email-analysis">
+                <p class="analysis-label">Detectado por PhishGuard</p>
+                <ul class="analysis-list">
+                  <li><i class="fa-solid fa-check"></i> Patrón de urgencia</li>
+                  <li><i class="fa-solid fa-check"></i> Dominio suplantado</li>
+                  <li><i class="fa-solid fa-check"></i> Campaña activa (cluster #47)</li>
+                </ul>
+                <div class="alert-progress">
+                  <div class="progress-fill"></div>
+                </div>
+                <p class="alert-confidence">Confianza del modelo: 96%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text">
+        <h2>Análisis Semántico Local</h2>
+        <p>PhishGuard procesa cada correo electrónico con un pipeline de aprendizaje no supervisado: genera embeddings semánticos, aplica clustering con HDBSCAN para descubrir campañas masivas emergentes y detecta anomalías con Isolation Forest sin requerir etiquetas previas.</p>
+        <p>Un modelo de lenguaje grande open-weights, alojado en nuestra propia infraestructura, complementa el análisis identificando técnicas de ingeniería social y generando explicaciones claras en español. Cero datos enviados a terceros.</p>
+        <a href="#collections" class="btn">Ver características</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Collections Section / Características -->
+  <section id="collections">
+    <div class="title title-right">
+      <span class="line line-right"></span><h3>Tres pilares</h3>
+    </div>
+    <div class="wrapper">
+      <a class="box box1" href="#">
+        <i class="fa-solid fa-diagram-project box-icon" aria-hidden="true"></i>
+        <h4>ML no supervisado</h4>
+        <p class="box-text">Clustering con HDBSCAN y detección de anomalías con Isolation Forest descubren campañas zero-day sin esperar etiquetas.</p>
+        <div class="box-overlay"></div>
+      </a>
+      <a class="box box2" href="#">
+        <i class="fa-solid fa-server box-icon" aria-hidden="true"></i>
+        <h4>LLM autoalojado</h4>
+        <p class="box-text">Modelos Llama, Mistral o Phi-3 ejecutados en nuestra infraestructura. Ningún correo viaja a APIs de terceros.</p>
+        <div class="box-overlay"></div>
+      </a>
+      <a class="box box3" href="#">
+        <i class="fa-solid fa-people-group box-icon" aria-hidden="true"></i>
+        <h4>Inteligencia comunitaria</h4>
+        <p class="box-text">Panel para investigadores con visualización de clusters, mapas de campañas activas y métricas regionales anonimizadas.</p>
+        <div class="box-overlay"></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="title title-left">
+      <span class="line"></span><h3>Sobre PhishGuard</h3>
+    </div>
+    <div class="wrapper">
+      <div class="text">
+        <p>Desde 2026, PhishGuard nace con la convicción de que la ciberseguridad inteligente debe estar al alcance de todos sin sacrificar privacidad. La mayoría de las brechas de seguridad empresariales comienzan con un correo de phishing, y las soluciones que dependen de IA en la nube de terceros crean nuevos riesgos de soberanía de datos.</p>
+        <p>Nuestra plataforma combina aprendizaje no supervisado con un modelo de lenguaje open-weights ejecutado en infraestructura propia. Esto permite detectar campañas emergentes que aún no tienen etiqueta, suplantaciones sofisticadas de dominio y técnicas de ingeniería social en español, sin que un solo correo abandone nuestro perímetro.</p>
+        <p>Desde el clustering de embeddings hasta el panel de inteligencia para investigadores, cada componente está diseñado para empoderar a usuarios, PyMEs e instituciones a defenderse de la amenaza más común del mundo digital.</p>
+      </div>
+      <!-- <div class="video-wrapper">
+        <div class="video-placeholder">
+          <i class="fa-solid fa-circle-play video-icon"></i>
+          <p>Conoce el proyecto</p>
+        </div>
+      </div> -->
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <!-- <section id="contact">
+    <div class="wrapper">
+      <div class="form-wrapper">
+        <h4>Mantente protegido. Suscríbete</h4>
+        <form id="form" action="#">
+          <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+          <input type="submit" id="submit" value="OK" class="submit">
+        </form>
+      </div>
+      <div class="contact-wrapper">
+        <h4>Conecta con PhishGuard</h4>
+        <div class="wrapper">
+          <ul class="social-menu">
+            <li><a href="#" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a></li>
+            <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a></li>
+            <li><a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a></li>
+          </ul>
+          <a class="contact-footer contact-tel" href="tel:+520000000000"><i class="fa-solid fa-phone" aria-hidden="true"></i>+52 000-000-0000</a>
+          <a class="contact-footer contact-email" href="mailto:hola@phishguard.app"><i class="fa-solid fa-envelope" aria-hidden="true"></i>Envíanos un correo</a>
+        </div>
+      </div>
+      <div class="copy-wrapper">
+        <h6><i class="fa-solid fa-copyright" aria-hidden="true"></i> 2026 PhishGuard · Proyecto Integrador de Noveno Cuatrimestre</h6>
+      </div>
+    </div>
+  </section> -->
+
+</body>
+</html>
