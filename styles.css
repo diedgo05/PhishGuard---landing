@@ -642,9 +642,419 @@ input:focus {
 }
 
 /* ============================
+   URGENCIA
+   ============================ */
+.urgency-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.urgency-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4em;
+}
+.urgency-point {
+  display: flex;
+  gap: 1em;
+  align-items: flex-start;
+}
+.urgency-icon {
+  font-size: 1.6em;
+  color: #13808e;
+  flex-shrink: 0;
+  background: #e6f3f4;
+  width: 1.8em;
+  height: 1.8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.urgency-point h4 {
+  margin: 0 0 .25em;
+  font-size: .95em;
+}
+.urgency-point p {
+  margin: 0;
+  font-size: .85em;
+  color: #324a5f;
+  line-height: 1.5em;
+}
+
+/* ============================
+   GRÁFICAS DE BARRAS
+   ============================ */
+.chart-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.8em 1.6em;
+  box-shadow: 0 4px 16px -8px rgba(11, 37, 69, 0.2);
+}
+.chart-wide {
+  margin-top: 2.5em;
+}
+.chart-title {
+  font-size: .95em;
+  font-weight: 700;
+  color: #0b2545;
+  margin: 0 0 1.4em;
+  text-align: center;
+}
+.bar-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: .8em;
+}
+.bar-label {
+  flex: 0 0 5.5em;
+  font-size: .8em;
+  font-weight: 500;
+  color: #324a5f;
+  text-align: right;
+}
+.bar-track {
+  flex: 1;
+  background: #eef2f6;
+  border-radius: 6px;
+  height: 2em;
+  overflow: hidden;
+}
+.bar-fill {
+  height: 100%;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: .8em;
+  transition: width 1s ease;
+  min-width: 3em;
+}
+.bar-danger { background: linear-gradient(90deg, #e07a5f 0%, #c44d4d 100%); }
+.bar-safe { background: linear-gradient(90deg, #13808e 0%, #0b6b77 100%); }
+.bar-neutral { background: linear-gradient(90deg, #6b8299 0%, #4a6075 100%); }
+.bar-value {
+  color: #fff;
+  font-size: .75em;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.chart-source {
+  font-size: .72em;
+  color: #8a9bab;
+  text-align: center;
+  margin: 1.4em 0 0;
+  font-style: italic;
+}
+
+/* ============================
+   TABLA COMPARATIVA
+   ============================ */
+.compare-table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1em;
+}
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px -8px rgba(11, 37, 69, 0.2);
+}
+.compare-table th {
+  background: #0b2545;
+  color: #fff;
+  padding: 1em .8em;
+  font-size: .8em;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  text-align: center;
+}
+.compare-table th:first-child {
+  text-align: left;
+}
+.compare-table th.col-us {
+  background: #13808e;
+}
+.compare-table td {
+  padding: .9em .8em;
+  border-bottom: 1px solid #eef2f6;
+  font-size: .85em;
+  color: #324a5f;
+  text-align: center;
+}
+.compare-table td:first-child {
+  text-align: left;
+  font-weight: 500;
+  color: #0b2545;
+}
+.compare-table td.col-us {
+  background: #f0f9fa;
+}
+.compare-table tr:last-child td {
+  border-bottom: none;
+}
+.compare-table .yes {
+  color: #2e8b57;
+  font-size: 1.2em;
+}
+.compare-table .no {
+  color: #c44d4d;
+  font-size: 1.2em;
+}
+.compare-table .partial {
+  color: #d79a3c;
+  font-size: .8em;
+  font-weight: 600;
+}
+
+/* ============================
+   SECCIONES NUEVAS
+   ============================ */
+
+/* Intro y citas de sección */
+.section-intro {
+  text-align: center;
+  max-width: 46em;
+  margin: 0 auto 2.5em;
+  line-height: 1.6em;
+  color: #324a5f;
+  font-size: 1em;
+}
+.section-quote {
+  text-align: center;
+  font-size: 1.15em;
+  font-weight: 500;
+  color: #0b2545;
+  font-style: italic;
+  max-width: 40em;
+  margin: 2.5em auto 0;
+  line-height: 1.5em;
+  padding: 0 1em;
+}
+.footer-note-small {
+  text-align: center;
+  font-size: .75em;
+  color: #8a9bab;
+  margin-top: 2em;
+}
+
+/* Problema / Stats */
+#problem {
+  background-color: #d9e4ec;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2em;
+}
+.stat-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.8em 1.5em;
+  text-align: center;
+  box-shadow: 0 4px 14px -8px rgba(11, 37, 69, 0.2);
+  transition: transform .3s ease;
+}
+.stat-card:hover {
+  transform: translateY(-4px);
+}
+.stat-icon {
+  font-size: 2em;
+  color: #13808e;
+  margin-bottom: .4em;
+}
+.stat-number {
+  font-size: 2.2em;
+  font-weight: 700;
+  color: #0b2545;
+  margin: .1em 0;
+  line-height: 1;
+}
+.stat-label {
+  font-size: .85em;
+  color: #324a5f;
+  line-height: 1.4em;
+  margin: .5em 0 0;
+}
+
+/* Por qué elegirnos */
+.reasons-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5em;
+}
+.reason-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.8em 1.6em;
+  border-top: 3px solid #13808e;
+  box-shadow: 0 4px 14px -8px rgba(11, 37, 69, 0.15);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.reason-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px -12px rgba(11, 37, 69, 0.3);
+}
+.reason-icon {
+  font-size: 1.8em;
+  color: #13808e;
+  margin-bottom: .5em;
+}
+.reason-card h4 {
+  margin: .4em 0;
+  font-size: .95em;
+}
+.reason-card p {
+  font-size: .85em;
+  color: #324a5f;
+  line-height: 1.5em;
+  margin: .4em 0 0;
+}
+
+/* Seguridad de datos */
+#security {
+  background-color: #0b2545;
+}
+#security .title h3 {
+  color: #fff;
+}
+#security .line {
+  background-color: #13808e;
+}
+.security-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5em;
+}
+.security-item {
+  display: flex;
+  gap: 1em;
+  align-items: flex-start;
+}
+.security-num {
+  font-size: 1.6em;
+  font-weight: 700;
+  color: #13808e;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.security-item h4 {
+  color: #fff;
+  margin: 0 0 .3em;
+  font-size: .95em;
+}
+.security-item p {
+  color: #b8cad9;
+  font-size: .85em;
+  line-height: 1.5em;
+  margin: 0;
+}
+
+/* Planes */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5em;
+}
+.price-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2em 1.6em;
+  text-align: center;
+  border: 1px solid #e0e7ee;
+  position: relative;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.price-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px -12px rgba(11, 37, 69, 0.3);
+}
+.price-featured {
+  border: 2px solid #13808e;
+}
+.price-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #13808e;
+  color: #fff;
+  font-size: .65em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: .4em 1em;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+.price-card h4 {
+  font-size: 1em;
+  margin: 0 0 .5em;
+}
+.price-amount {
+  font-size: 2em;
+  font-weight: 700;
+  color: #0b2545;
+  margin: .2em 0;
+  line-height: 1;
+}
+.price-amount span {
+  font-size: .4em;
+  font-weight: 400;
+  color: #8a9bab;
+}
+.price-detail {
+  font-size: .8em;
+  color: #13808e;
+  font-weight: 500;
+  margin: .3em 0 1.2em;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.price-features {
+  list-style: none;
+  padding: 0;
+  margin: 1em 0 0;
+  text-align: left;
+}
+.price-features li {
+  font-size: .82em;
+  color: #324a5f;
+  padding: .4em 0;
+  display: flex;
+  align-items: center;
+  gap: .6em;
+}
+.price-features li i {
+  color: #13808e;
+  font-size: .85em;
+}
+
+/* ============================
    RESPONSIVE
    ============================ */
 @media (min-width: 576px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .reasons-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .security-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+  }
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
   h1 {
     font-size: 2em;
   }
@@ -691,6 +1101,29 @@ input:focus {
 @media (min-width: 768px) {
   .wrapper {
     display: flex;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .reasons-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .pricing-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .urgency-wrapper {
+    flex-direction: row;
+    align-items: center;
+    gap: 3em;
+  }
+  .urgency-text {
+    flex: 1;
+  }
+  .chart-card {
+    flex: 1;
+  }
+  .bar-label {
+    flex: 0 0 7em;
   }
   .nav-brand {
     padding: 1.5em 0;
